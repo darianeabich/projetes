@@ -1,0 +1,20 @@
+/*   SWITCH   */
+.p-inputswitch.p-inputswitch-checked:not(.p-disabled):hover .p-inputswitch-slider {
+  background: var(--brand-500) !important;
+}
+
+.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+  background: var(--brand-500) !important;
+}
+
+.p-inputswitch .p-inputswitch-slider {
+  background: var(--surfaceSecondary) !important;
+  color: var(--textPrimary) !important;
+}
+
+.p-inputswitch.p-focus .p-inputswitch-slider {
+  outline: solid 2px var(--brand-300);
+  outline-offset: 2px;
+  border: none !important;
+  box-shadow: none !important;
+}

@@ -1,0 +1,34 @@
+.p-autocomplete-panel .p-autocomplete-items .p-autocomplete-item {
+  background: var(--surfaceSecondary);
+  color: var(--textPrimary);
+
+  &:hover {
+    background-color: var(--surfaceSecondaryHover);
+    color: var(--textPrimary);
+  }
+}
+
+.p-autocomplete .p-autocomplete-panel {
+  background: var(--surfaceSecondary);
+  border-radius: 8px;
+}
+
+.p-autocomplete-panel .p-autocomplete-items:not(.p-autocomplete-virtualscroll) {
+  background: var(--surfaceSecondary);
+  border-radius: 8px;
+}
+
+.p-autocomplete .p-autocomplete-multiple-container:not(.p-disabled).p-focus {
+  box-shadow: none !important;
+  border-color: var(--brand-500);
+}
+
+.p-autocomplete .p-autocomplete-multiple-container .p-autocomplete-input-token input {
+  color: var(--textPrimary);
+}
+
+.p-autocomplete .p-autocomplete-multiple-container .p-autocomplete-token {
+  background: var(--surfaceSecondaryHover);
+  color: var(--textPrimary);
+
+}
