@@ -134,8 +134,8 @@ body {
   font-size: 12px;
 }
 
-a:hover {
-  color: var(--brand-300) !important;
+:host ::ng-deep a:hover {
+  color: var(--brand-300);
 }
 
 /*   span table    */

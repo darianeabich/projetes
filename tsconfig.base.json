@@ -15,8 +15,18 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@projetes/shared-styles": ["libs/shared/styles/src/index.ts"]
+      "@projetes/images": ["libs/shared/images/src/index.ts"],
+      "@projetes/layout": ["libs/modules/feature/layout/src/index.ts"],
+      "@projetes/shared-styles": ["libs/shared/styles/src/index.ts"],
+      "@projetes/shared/enums": ["libs/shared/core/enums/src/index.ts"],
+      "@projetes/shared/service": ["libs/shared/core/services/src/index.ts"]
     }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
   },
   "exclude": ["node_modules", "tmp"]
 }
