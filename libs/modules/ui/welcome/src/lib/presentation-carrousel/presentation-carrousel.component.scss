@@ -1,0 +1,40 @@
+:host ::ng-deep .p-card {
+  background-color: var(--surfaceSecondary) !important;
+  border-radius: 8px;
+}
+
+:host ::ng-deep .p-card-body {
+  padding: 0;
+}
+
+:host ::ng-deep .p-card-content {
+  padding: 0;
+}
+
+:host ::ng-deep .p-carousel-items-container {
+  max-width: 500px;
+}
+
+:host ::ng-deep .p-carousel .p-carousel-indica {
+  max-width: 500px;
+  display: none;
+}
+
+:host ::ng-deep .custom-carousel {
+  padding-top: 1.5rem;
+}
+
+.imagem-item {
+  // width: 400px;
+  max-width: 500px;
+  max-height: 600px;
+
+  img {
+    // max-width: 500px;
+    width: 100%;
+    height: 330px;
+    // max-height: 600px;
+  }
+  // height: 100%;
+  // object-fit: cover;
+}
