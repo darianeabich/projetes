@@ -1,0 +1,97 @@
+{
+  "name": "projetes",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "projetes",
+  "sourceRoot": "apps/projetes/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/projetes",
+        "index": "apps/projetes/src/index.html",
+        "browser": "apps/projetes/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/projetes/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/projetes/src/favicon.ico",
+          "apps/projetes/src/assets",
+          {
+            "glob": "**/*",
+            "input": "libs/shared/assets/",
+            "output": "/assets"
+          }
+        ],
+        "styles": [
+          "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+          "node_modules/primeng/resources/primeng.min.css",
+          "node_modules/primeng/resources/themes/saga-blue/theme.css",
+          "node_modules/primeicons/primeicons.css",
+          "apps/projetes/src/styles.scss"
+        ],
+        "scripts": ["node_modules/bootstrap/dist/js/bootstrap.js"]
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "projetes:build:production"
+        },
+        "development": {
+          "buildTarget": "projetes:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "projetes:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/projetes/jest.config.ts"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "projetes:build",
+        "staticFilePath": "dist/apps/projetes/browser"
+      }
+    }
+  }
+}

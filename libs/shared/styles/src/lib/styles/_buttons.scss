@@ -1,0 +1,85 @@
+/*   BOTÕES   */
+.p-button {
+  color: var(--textOnPrimary);
+  background: var(--brand-500);
+  border-color: var(--brand-500);
+  border-radius: 8px;
+  height: 40px;
+}
+
+.p-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+  outline: 0;
+  display: inline-block;
+  outline-offset: 0 none;
+  box-shadow: none;
+  border-radius: 8px;
+}
+
+.p-button:hover:not([disabled]) {
+  color: var(--textOnPrimary);
+  background-color: var(--brand-300);
+  border-color: var(--brand-300);
+}
+
+.p-button:focus:not([disabled]) {
+  outline: solid 2px var(--brand-300);
+  outline-offset: 2px;
+  border: none;
+  box-shadow: none;
+}
+
+.confirm-button {
+  color: var(--textOnPrimary);
+}
+
+.confirm-button:hover {
+  color: var(--textOnPrimary);
+}
+
+.confirm-button:focus {
+  outline: solid 2px var(--brand-300);
+  outline-offset: 2px;
+  border: none;
+  box-shadow: none;
+  color: var(--textOnPrimary);
+}
+
+.p-button-outlined-primary {
+  border: 1px solid var(--brand-500);
+  background: transparent;
+  border-radius: 8px;
+  color: var(--brand-500);
+}
+
+.p-button-outlined-primary:focus {
+  background: var(--brand-300);
+  color: var(--textOnPrimary);
+}
+
+.p-button.p-button-secondary {
+  color: var(--textPrimary);
+  background: var(--surfaceSecondary);
+  border: 1px solid var(--surfaceSecondary);
+
+  &.btn-icon {
+    color: var(--textSecondary);
+  }
+}
+
+.p-button.p-button-secondary:hover:not([disabled]) {
+  color: var(--textPrimary);
+  background: var(--surfaceSecondaryHover);
+  border: 1px solid var(--surfaceSecondaryHover);
+}
+
+/*  BUTTON TEXT  */
+.p-button.p-button-text {
+  color: var(--brand-500);
+
+  &:enabled:hover {
+    color: var(--brand-300);
+    background: var(--surfaceSecondary);
+  }
+}

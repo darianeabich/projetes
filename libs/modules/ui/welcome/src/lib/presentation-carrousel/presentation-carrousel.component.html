@@ -1,0 +1,43 @@
+<!-- <p-card>
+  <p-carousel
+    [value]="images"
+    styleClass="custom-carousel"
+    [numVisible]="1"
+    [numScroll]="1"
+    [circular]="true"
+    [autoplayInterval]="3000"
+    [responsiveOptions]="responsiveOptions"
+    [showNavigators]="false"
+    [showIndicators]="false"
+  ></p-carousel>
+  <ng-template let-item pTemplate="item">
+    <div class="imagem-item">
+      <img src="{{ item.path }}" alt="{{ item?.alt }}" />
+      <p>{{ item.title }}</p>
+    </div>
+  </ng-template>
+</p-card> -->
+
+<div class="carousel-container">
+  <div
+    class="carousel-images"
+    [ngStyle]="{ transform: 'translateX(' + -currentIndex * 100 + '%)' }"
+  >
+    <img
+      *ngFor="let image of images; let i = index"
+      [src]="image.path"
+      [class.active]="i === currentIndex"
+      alt="Carousel Image {{ i + 1 }}"
+    />
+  </div>
+
+  <div class="pagination">
+    <span
+      *ngFor="let image of images; let i = index"
+      class="dot"
+      [class.active]="i === currentIndex"
+      (click)="setCurrentIndex(i)"
+    >
+    </span>
+  </div>
+</div>

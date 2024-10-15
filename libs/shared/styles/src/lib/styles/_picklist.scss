@@ -1,0 +1,49 @@
+.p-picklist .p-picklist-list .p-picklist-item {
+  // padding: 0.5rem 1rem;
+  // margin: 0;
+  // border: 0 none;
+  color: var(--textPrimary);
+  // background: transparent;
+  // transition: box-shadow 0.2s;
+}
+
+.p-picklist
+  .p-picklist-list:not(.cdk-drop-list-dragging)
+  .p-picklist-item:not(.p-highlight):hover {
+  background: var(--brand-300-hover);
+  color: var(--textPrimary);
+}
+
+.p-picklist .p-picklist-list .p-picklist-item.p-highlight {
+  background: var(--brand-300-hover);
+  color: var(--textPrimary);
+}
+
+.p-picklist .p-picklist-list .p-picklist-item:focus {
+  box-shadow: inset 0 0 0 0.15rem var(--brand-300-hover);
+}
+
+.p-picklist .p-picklist-header .p-picklist-title {
+  font-size: 14px;
+}
+
+.p-picklist .p-picklist-header {
+  padding: 0.5rem 1rem;
+  background-color: var(--surfacePrimary);
+  color: var(--textPrimary);
+  border: 1px solid var(--stroke);
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.p-picklist .p-picklist-buttons .p-button {
+  width: 42px;
+}
+
+.p-picklist .p-picklist-list {
+  background: var(--surfacePrimary);
+  color: var(--textPrimary);
+  border: 1px solid var(--stroke);
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}

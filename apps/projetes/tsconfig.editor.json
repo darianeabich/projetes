@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/**/*.ts",
+    "../../libs/shared/core/enums/src/enum/ETheme.enum.ts"
+  ],
+  "compilerOptions": {
+    "types": ["jest", "node"]
+  }
+}

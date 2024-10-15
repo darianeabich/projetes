@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'material-icons/iconfont/material-icons.css';
+@import 'libs/shared/styles/src/lib/styles/_buttons.scss';
+@import 'libs/shared/styles/src/lib/styles/_inputs.scss';
+@import 'libs/shared/styles/src/lib/styles/_tables.scss';
+@import 'libs/shared/styles/src/lib/styles/_dropdown.scss';
+@import 'libs/shared/styles/src/lib/styles/_switch.scss';
+@import 'libs/shared/styles/src/lib/styles/_dialog.scss';
+@import 'libs/shared/styles/src/lib/styles/_fieldset.scss';
+@import 'libs/shared/styles/src/lib/styles/_accordion.scss';
+@import 'libs/shared/styles/src/lib/styles/_tabview.scss';
+@import 'libs/shared/styles/src/lib/styles/_autocomplete.scss';
+@import 'libs/shared/styles/src/lib/styles/_texts.scss';
+@import 'libs/shared/styles/src/lib/styles/_picklist.scss';
+
+:root {
+  --brand-500: #966ff9;
+  --brand-300: #765ac7;
+  --brand-300-hover: rgba(118, 90, 199, 0.26);
+  --yellow-brand: #eebc31;
+
+  --surfacePrimary: #18181b;
+  --surfaceSecondary: #27272a;
+  --surfaceSecondaryHover: #3f3f46;
+  --stroke: #52525b;
+  --tooltip: #f4f4f5;
+  --textOnPrimary: #f4f4f5;
+  --textPrimary: #f4f4f5;
+  --textSecondary: #a1a1aa;
+  --textOnTooltip: #27272a;
+
+  --etapas-empatia: #93baf4;
+  --etapas-empatiaHover: #9ec5ff;
+  --etapas-definicao: #98d8cd;
+  --etapas-definicaoHover: #a1e5da;
+  --etapas-ideacao: #f2e196;
+  --etapas-ideacaoHover: #ffefa6;
+  --etapas-prototipacao: #d98a6b;
+  --etapas-prototipacaoHover: #f29a77;
+  --etapas-teste: #c0615e;
+  --etapas-testeHover: #de706d;
+
+  --success: #45ad50;
+  --error: #d47861;
+  --info: #648afa;
+}
+
+:root .light-theme {
+  --brand-500: #7b5acd;
+  --brand-300: #5c4399;
+  --brand-300-hover: rgba(92, 67, 153, 0.259);
+  --yellow-brand: #eebc31;
+
+  --surfacePrimary: #ffffff;
+  --surfaceSecondary: #f4f4f5;
+  --surfaceSecondaryHover: #e4e4e7;
+  --stroke: #d4d4d8;
+  --tooltip: #27272a;
+  --textOnPrimary: #f4f4f5;
+  --textPrimary: #27272a;
+  --textSecondary: #71717a;
+  --textOnTooltip: #f4f4f5;
+
+  --etapas-empatia: #93baf4;
+  --etapas-empatiaHover: #9ec5ff;
+  --etapas-definicao: #98d8cd;
+  --etapas-definicaoHover: #a1e5da;
+  --etapas-ideacao: #f2e196;
+  --etapas-ideacaoHover: #ffefa6;
+  --etapas-prototipacao: #d98a6b;
+  --etapas-prototipacaoHover: #f29a77;
+  --etapas-teste: #c0615e;
+  --etapas-testeHover: #de706d;
+
+  --success: #45cc54;
+  --error: #cc816e;
+  --info: #5576d9;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--surfacePrimary) !important;
+  color: var(--textPrimary) !important;
+}
+
+.div-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 16px;
+}
+
+/*   TOOLBAR   */
+.p-toolbar {
+  background: var(--surfacePrimary) !important;
+  border: 0 var(--surfacePrimary) !important;
+  padding: 0;
+}
+
+/*   LOGO    */
+.colchete {
+  color: var(--brand-500) !important;
+  font-weight: bold !important;
+}
+
+/*   BREADCRUMB   */
+.p-breadcrumb {
+  background: var(--surfacePrimary) !important;
+  border: 0 var(--surfacePrimary) !important;
+  border-radius: 3px;
+  padding: 1rem;
+}
+
+.pi-home:before {
+  color: var(--textPrimary) !important;
+}
+
+.p-breadcrumb ul li .p-menuitem-link:focus {
+  box-shadow: 0 0 0 0.2rem var(--brand-300) !important;
+}
+
+.p-breadcrumb ul li .p-menuitem-link .p-menuitem-text {
+  font-size: 12px;
+}
+
+.p-breadcrumb ul li.p-breadcrumb-chevron,
+.p-breadcrumb ul li .p-menuitem-link .p-menuitem-icon {
+  font-size: 12px;
+}
+
+:host ::ng-deep a:hover {
+  color: var(--brand-300);
+}
+
+/*   span table    */
+.inactive-state {
+  background: var(--surfaceSecondaryHover);
+  border-radius: 8px;
+  padding: 6px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--textOnPrimary);
+}
+
+.active-state {
+  background: var(--success);
+  border-radius: 8px;
+  padding: 6px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--textOnPrimary);
+}

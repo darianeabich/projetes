@@ -1,0 +1,21 @@
+<projetes-header>
+  <div class="acoes" right>
+    <projetes-button-theme></projetes-button-theme>
+
+    <div class="acoes__menu" *ngIf="showMenu === true; else login">
+      <projetes-menu [isAdmin]="true" (logout)="logout()"></projetes-menu>
+    </div>
+  </div>
+</projetes-header>
+
+<ng-template #login>
+  <button
+    pButton
+    pRipple
+    type="button"
+    label="Login"
+    (click)="showLogin()"
+  ></button>
+</ng-template>
+
+<router-outlet></router-outlet>

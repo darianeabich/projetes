@@ -1,0 +1,49 @@
+.p-fieldset.p-fieldset-toggleable .p-fieldset-legend a {
+  color: var(--brand-500);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 0;
+  padding-top: 0;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.p-fieldset.p-fieldset-toggleable .p-fieldset-legend:hover {
+  background: var(--surfacePrimary);
+  border-color: var(--surfacePrimary);
+}
+
+.p-fieldset {
+  background: var(--surfacePrimary);
+  border: none;
+  color: var(--textPrimary);
+}
+
+legend {
+  width: 15%;
+
+  .pi-plus:before {
+    content: "\e90e";
+  }
+
+  .pi-minus:before {
+    content: "\e910";
+  }
+}
+
+.p-fieldset .p-fieldset-legend {
+  background: var(--surfacePrimary);
+  border: none;
+
+  a {
+    justify-content: flex-start !important;
+
+  }
+}
+
+.p-fieldset .p-fieldset-content {
+  padding-top: 0;
+}
