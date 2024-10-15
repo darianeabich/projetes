@@ -16,7 +16,6 @@
     "baseUrl": ".",
     "paths": {
       "@projetes/home": ["libs/modules/feature/home/src/index.ts"],
-      "@projetes/shared-images": ["libs/shared/images/src/index.ts"],
       "@projetes/layout": ["libs/modules/feature/layout/src/index.ts"],
       "@projetes/ui-welcome": ["libs/modules/ui/welcome/src/index.ts"],
       "@projetes/shared-styles": ["libs/shared/styles/src/index.ts"],
