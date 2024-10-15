@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
+import { LocalStorageService } from '@projetes/shared-service';
 import { ETheme } from '@projetes/shared/enums';
-import { LocalStorageService } from '@projetes/shared/service';
 
 @Component({
   selector: 'projetes-button-theme',
