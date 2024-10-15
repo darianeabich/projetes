@@ -1,8 +1,40 @@
 <section id="welcome" class="w-section">
-  <div class="w-section__presentation">
-    <projetes-presentation-carrousel></projetes-presentation-carrousel>
+  <div class="col-1 col-sm-1 col-md-6 justify-content-between">
+    <div>
+      <p class="frase-enfase">
+        Crie
+        <br />
+        projetos
+        <br />
+        inovadores.
+      </p>
+    </div>
+    <div>
+      <p-carousel [value]="welcomePhrases">
+        <ng-template let-frase pTemplate="item">
+          <div class="frase-item">
+            <h5 class="mb-1 titulo-h5">{{ frase.frase }}</h5>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+
+    <div class="btn-começar">
+      <button
+        pButton
+        type="button"
+        label="Começar agora"
+        class="p-button-outlined-primary"
+        routerLink="signup"
+      ></button>
+    </div>
   </div>
-  <div class="w-section__forms">
+
+  <!-- <div class="w-section__presentation">
+    <projetes-presentation-carrousel></projetes-presentation-carrousel>
+  </div> -->
+  <!-- <div class="w-section__forms"> -->
+  <div class="col-1 col-sm-1 col-md-6 variavel">
     <router-outlet></router-outlet>
   </div>
 </section>
