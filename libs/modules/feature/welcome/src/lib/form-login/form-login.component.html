@@ -1,1 +1,14 @@
-<p>form-login works!</p>
+<section id="login" class="w-section">
+  <form class="form mt-4" [formGroup]="loginForm" (submit)="login()">
+    <div class="form-group mb-4">
+      <label for="email" class="form-control-label pb-1">Usuário</label>
+      <input
+        id="email"
+        class="form-control ng-dirty ng-invallid"
+        placeholder="seu.email@email.com"
+        formControlName="email"
+        autofocus
+      />
+    </div>
+  </form>
+</section>
