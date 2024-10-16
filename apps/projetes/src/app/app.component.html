@@ -2,7 +2,7 @@
   <div class="acoes" right>
     <projetes-button-theme></projetes-button-theme>
 
-    <div class="acoes__menu" *ngIf="showMenu === true; else login">
+    <div class="acoes__menu" *ngIf="showMenu === false; else login">
       <projetes-menu [isAdmin]="true" (logout)="logout()"></projetes-menu>
     </div>
   </div>

@@ -17,10 +17,10 @@
     "paths": {
       "@projetes/home": ["libs/modules/feature/home/src/index.ts"],
       "@projetes/layout": ["libs/modules/feature/layout/src/index.ts"],
-      "@projetes/ui-welcome": ["libs/modules/ui/welcome/src/index.ts"],
+      "@projetes/shared-service": ["libs/shared/core/services/src/index.ts"],
       "@projetes/shared-styles": ["libs/shared/styles/src/index.ts"],
       "@projetes/shared/enums": ["libs/shared/core/enums/src/index.ts"],
-      "@projetes/shared-service": ["libs/shared/core/services/src/index.ts"],
+      "@projetes/ui-welcome": ["libs/modules/ui/welcome/src/index.ts"],
       "@projetes/welcome": ["libs/modules/feature/welcome/src/index.ts"]
     }
   },

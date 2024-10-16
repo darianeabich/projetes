@@ -22,6 +22,23 @@ import { CarouselModule } from 'primeng/carousel';
 export class WelcomeComponent implements OnInit {
   private welcomeService: WelcomeService = inject(WelcomeService);
   welcomePhrases: any;
+  responsiveOptions = [
+    {
+      breakpoint: '1024px',
+      numVisible: 1,
+      numScroll: 1,
+    },
+    {
+      breakpoint: '768px',
+      numVisible: 1,
+      numScroll: 1,
+    },
+    {
+      breakpoint: '560px',
+      numVisible: 1,
+      numScroll: 1,
+    },
+  ];
 
   ngOnInit(): void {
     this.welcomeService.getPhrases().subscribe((data) => {

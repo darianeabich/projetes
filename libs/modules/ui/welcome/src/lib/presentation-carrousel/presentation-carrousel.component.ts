@@ -1,10 +1,12 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { CardModule } from 'primeng/card';
+import { CarouselModule } from 'primeng/carousel';
 
 @Component({
   selector: 'projetes-presentation-carrousel',
   standalone: true,
-  imports: [CommonModule, NgFor],
+  imports: [CommonModule, NgFor, CarouselModule, CardModule],
   templateUrl: './presentation-carrousel.component.html',
   styleUrl: './presentation-carrousel.component.scss',
 })
@@ -32,6 +34,23 @@ export class PresentationCarrouselComponent implements OnInit, OnDestroy {
       path: '../assets/images/04.png',
       alt: 'Description for Image 4',
       title: 'Empatia. Criatividade. Inovação.',
+    },
+  ];
+  responsiveOptions = [
+    {
+      breakpoint: '1024px',
+      numVisible: 1,
+      numScroll: 1,
+    },
+    {
+      breakpoint: '768px',
+      numVisible: 1,
+      numScroll: 1,
+    },
+    {
+      breakpoint: '560px',
+      numVisible: 1,
+      numScroll: 1,
     },
   ];
 

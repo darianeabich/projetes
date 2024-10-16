@@ -1,7 +1,9 @@
 <section id="welcome" class="w-section">
-  <div class="col-1 col-sm-1 col-md-6 justify-content-between">
-    <div>
-      <p class="frase-enfase">
+  <div
+    class="col-1 col-sm-1 col-md-6 justify-content-between w-section__presentation"
+  >
+    <div class="w-section__presentation__emphasis">
+      <p>
         Crie
         <br />
         projetos
@@ -9,8 +11,18 @@
         inovadores.
       </p>
     </div>
-    <div>
-      <p-carousel [value]="welcomePhrases">
+
+    <div class="w-section__presentation__context">
+      <p-carousel
+        [value]="welcomePhrases"
+        styleClass="custom-carousel"
+        [numVisible]="1"
+        [numScroll]="1"
+        [circular]="true"
+        [autoplayInterval]="3000"
+        [responsiveOptions]="responsiveOptions"
+        [showNavigators]="false"
+      >
         <ng-template let-frase pTemplate="item">
           <div class="frase-item">
             <h5 class="mb-1 titulo-h5">{{ frase.frase }}</h5>
@@ -19,7 +31,7 @@
       </p-carousel>
     </div>
 
-    <div class="btn-começar">
+    <div class="w-section__presentation__action">
       <button
         pButton
         type="button"
@@ -30,11 +42,7 @@
     </div>
   </div>
 
-  <!-- <div class="w-section__presentation">
-    <projetes-presentation-carrousel></projetes-presentation-carrousel>
-  </div> -->
-  <!-- <div class="w-section__forms"> -->
-  <div class="col-1 col-sm-1 col-md-6 variavel">
+  <div class="col-1 col-sm-1 col-md-6 changeFrames">
     <router-outlet></router-outlet>
   </div>
 </section>

@@ -1,4 +1,4 @@
-<div class="carousel-container">
+<!-- <div class="carousel-container">
   <div
     class="carousel-images"
     [ngStyle]="{ transform: 'translateX(' + -currentIndex * 100 + '%)' }"
@@ -11,10 +11,6 @@
     />
   </div>
 
-  <div class="caroulsel-phrase">
-    <p>{{ images[currentIndex].title }}</p>
-  </div>
-
   <div class="pagination">
     <span
       *ngFor="let image of images; let i = index"
@@ -24,4 +20,27 @@
     >
     </span>
   </div>
-</div>
+</div> -->
+
+<section id="presentation-carousel" class="pc-section">
+  <div class="col-md-12">
+    <p-card class="pc-section__card">
+      <p-carousel
+        [value]="images"
+        styleClass="pc-section__card__custom-carousel"
+        [numVisible]="1"
+        [numScroll]="1"
+        [circular]="true"
+        [autoplayInterval]="3000"
+        [responsiveOptions]="responsiveOptions"
+        [showNavigators]="false"
+      >
+        <ng-template let-frase pTemplate="item">
+          <div class="imagem-item">
+            <img src="{{ frase.path }}" alt="" />
+          </div>
+        </ng-template>
+      </p-carousel>
+    </p-card>
+  </div>
+</section>
