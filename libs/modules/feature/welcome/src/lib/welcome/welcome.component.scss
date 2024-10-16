@@ -1,0 +1,75 @@
+.w-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  height: 78vh;
+
+  &__presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &__emphasis {
+      p {
+        text-transform: uppercase;
+        font-size: 60px;
+        font-family: 'Jura', sans-serif;
+        padding: 2rem 0;
+        line-height: normal;
+        margin-bottom: 0px;
+      }
+    }
+
+    &__context {
+      max-width: 600px;
+      text-align: center;
+    }
+
+    &__action {
+      .btn-começar {
+        text-align: center !important;
+      }
+    }
+  }
+}
+
+:host ::ng-deep .custom-carousel {
+  padding-bottom: 1.5rem !important;
+  padding-top: 0;
+}
+
+:host
+  ::ng-deep
+  .p-carousel
+  .p-carousel-indicators
+  .p-carousel-indicator
+  button {
+  border-radius: 50px !important;
+  width: 0.5rem;
+  background: var(--textSecondary);
+}
+
+:host
+  ::ng-deep
+  .p-carousel
+  .p-carousel-indicators
+  .p-carousel-indicator.p-highlight
+  button {
+  background: var(--brand-500) !important;
+}
+
+:host ::ng-deep .p-link:focus {
+  outline: none !important;
+}
+
+.changeFrames {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+}

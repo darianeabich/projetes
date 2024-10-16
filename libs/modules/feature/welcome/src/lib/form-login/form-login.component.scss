@@ -1,0 +1,39 @@
+.l-section {
+  width: 80vh;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: var(--surfaceSecondary);
+  border-radius: 8px;
+  padding: 5%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+
+  h5 {
+    text-align: center;
+    color: var(--textPrimary);
+  }
+
+  &__form {
+    &__forgot-password {
+      text-align: end;
+
+      a {
+        color: var(--textPrimary);
+        cursor: pointer;
+      }
+    }
+
+    &__action {
+      text-align: center;
+      gap: 0.25rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+}
+
+:host ::ng-deep .pi-eye:before,
+:host ::ng-deep .pi-eye-slash:before {
+  margin-left: -30px;
+  margin-top: -14px;
+  color: var(--stroke);
+}

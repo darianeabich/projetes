@@ -20,6 +20,7 @@
   --brand-300: #765ac7;
   --brand-300-hover: rgba(118, 90, 199, 0.26);
   --yellow-brand: #eebc31;
+  --yellow-brand-hover: rgba(238, 188, 49, 0.26);
 
   --surfacePrimary: #18181b;
   --surfaceSecondary: #27272a;
@@ -52,6 +53,7 @@
   --brand-300: #5c4399;
   --brand-300-hover: rgba(92, 67, 153, 0.259);
   --yellow-brand: #eebc31;
+  --yellow-brand-hover: rgba(238, 188, 49, 0.26);
 
   --surfacePrimary: #ffffff;
   --surfaceSecondary: #f4f4f5;
@@ -134,8 +136,8 @@ body {
   font-size: 12px;
 }
 
-a:hover {
-  color: var(--brand-300) !important;
+:host ::ng-deep a:hover {
+  color: var(--brand-300);
 }
 
 /*   span table    */

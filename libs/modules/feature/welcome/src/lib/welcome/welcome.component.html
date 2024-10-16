@@ -1,0 +1,48 @@
+<section id="welcome" class="w-section">
+  <div
+    class="col-1 col-sm-1 col-md-6 justify-content-between w-section__presentation"
+  >
+    <div class="w-section__presentation__emphasis">
+      <p>
+        Crie
+        <br />
+        projetos
+        <br />
+        inovadores.
+      </p>
+    </div>
+
+    <div class="w-section__presentation__context">
+      <p-carousel
+        [value]="welcomePhrases"
+        styleClass="custom-carousel"
+        [numVisible]="1"
+        [numScroll]="1"
+        [circular]="true"
+        [autoplayInterval]="3000"
+        [responsiveOptions]="responsiveOptions"
+        [showNavigators]="false"
+      >
+        <ng-template let-frase pTemplate="item">
+          <div class="frase-item">
+            <h5 class="mb-1 titulo-h5">{{ frase.frase }}</h5>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+
+    <div class="w-section__presentation__action">
+      <button
+        pButton
+        type="button"
+        label="Começar agora"
+        class="p-button-outlined-primary"
+        (click)="showSignup()"
+      ></button>
+    </div>
+  </div>
+
+  <div class="col-1 col-sm-1 col-md-6 changeFrames">
+    <router-outlet></router-outlet>
+  </div>
+</section>

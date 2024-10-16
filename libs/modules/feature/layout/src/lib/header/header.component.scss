@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px !important;
+  // height: 40px;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.12);
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    text-decoration: none;
+
+    &__text {
+      margin-left: 1rem;
+      color: var(--textPrimary);
+      font-family: 'Jura', sans-serif;
+      font-variant: normal;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 22px;
+      margin-bottom: 0;
+    }
+
+    &__img {
+      width: 30px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<section id="login" class="l-section">
+  <h5 class="text-center pt-3 pb-3 titulo-h5">Faça seu login.</h5>
+
+  <form
+    class="form mt-4 l-section__form"
+    [formGroup]="loginForm"
+    (submit)="login()"
+  >
+    <div class="form-group mb-4">
+      <label for="email" class="form-control-label pb-1">Usuário</label>
+      <input
+        id="email"
+        class="form-control ng-dirty ng-invallid"
+        placeholder="seu.email@email.com"
+        formControlName="email"
+        autofocus
+      />
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="senha" class="form-control-label pb-1">Senha</label>
+      <br />
+      <p-password
+        id="senha"
+        formControlName="senha"
+        type="password"
+        class="p-fluid"
+        placeholder="Mínimo de 8 dígitos"
+        [toggleMask]="true"
+      ></p-password>
+    </div>
+
+    <div class="l-section__form__forgot-password">
+      <a>Esqueci a senha</a>
+    </div>
+
+    <div class="l-section__form__action">
+      <button
+        pButton
+        type="submit"
+        label="Entrar"
+        [disabled]="loginForm.invalid"
+      ></button>
+    </div>
+  </form>
+</section>

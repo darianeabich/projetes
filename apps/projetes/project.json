@@ -16,7 +16,15 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/projetes/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/projetes/src/favicon.ico", "apps/projetes/src/assets"],
+        "assets": [
+          "apps/projetes/src/favicon.ico",
+          "apps/projetes/src/assets",
+          {
+            "glob": "**/*",
+            "input": "libs/shared/assets/",
+            "output": "/assets"
+          }
+        ],
         "styles": [
           "./node_modules/bootstrap/dist/css/bootstrap.min.css",
           "node_modules/primeng/resources/primeng.min.css",
