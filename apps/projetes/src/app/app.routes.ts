@@ -11,4 +11,8 @@ export const appRoutes: Route[] = [
     loadChildren: () =>
       import('@projetes/welcome').then((r) => r.welcomeRoutes),
   },
+  {
+    path: 'home',
+    loadComponent: () => import('@projetes/home').then((m) => m.HomeComponent),
+  },
 ];
