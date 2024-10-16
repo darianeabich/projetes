@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { WelcomeService } from '@projetes/shared-service';
 import { PresentationCarrouselComponent } from '@projetes/ui-welcome';
 import { ButtonModule } from 'primeng/button';
@@ -21,6 +21,7 @@ import { CarouselModule } from 'primeng/carousel';
 })
 export class WelcomeComponent implements OnInit {
   private welcomeService: WelcomeService = inject(WelcomeService);
+  private router = inject(Router);
   welcomePhrases: any;
   responsiveOptions = [
     {
@@ -44,5 +45,9 @@ export class WelcomeComponent implements OnInit {
     this.welcomeService.getPhrases().subscribe((data) => {
       this.welcomePhrases = data;
     });
+  }
+
+  showSignup() {
+    this.router.navigate(['welcome/signup']);
   }
 }

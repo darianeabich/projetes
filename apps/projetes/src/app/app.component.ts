@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   }
 
   showLogin() {
-    this.router.navigate(['boasvindas/login']);
+    this.router.navigate(['welcome/login']);
   }
 
   logout() {
