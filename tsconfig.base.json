@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@projetes/ui-common": ["libs/modules/ui/common/src/index.ts"],
       "@projetes/home": ["libs/modules/feature/home/src/index.ts"],
       "@projetes/layout": ["libs/modules/feature/layout/src/index.ts"],
       "@projetes/shared-service": ["libs/shared/core/services/src/index.ts"],
