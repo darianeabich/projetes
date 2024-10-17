@@ -1,1 +1,81 @@
-<section id="user-list" class="ul-section"></section>
+<section id="user-list" class="ul-section">
+  <projetes-breadcrumb></projetes-breadcrumb>
+
+  <div class="col-md-12 section__content">
+    <h5 class="titulo-h5">Lista de Usuários</h5>
+    <p-toolbar>
+      <div class="p-toolbar-group-left"></div>
+      <div class="p-toolbar-group-right">
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Novo Usuário"
+          icon="pi pi-plus"
+          iconPos="left"
+          routerLink="form"
+        ></button>
+      </div>
+    </p-toolbar>
+
+    <div>
+      <p-table
+        [value]="usersList"
+        responsiveLayout="scroll"
+        selectionMode="single"
+        dataKey="id"
+        styleClass="p-datatable-sm"
+      >
+        <ng-template pTemplate="header">
+          <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Tipo de Usuário</th>
+            <th>Status</th>
+            <th class="text-center">Ação</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-user>
+          <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.nome }} {{ user.sobrenome }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.perfil }}</td>
+            <td *ngIf="user.status">
+              <span class="active-state">Ativo</span>
+            </td>
+            <td *ngIf="!user.status">
+              <span class="inactive-state">Inativo</span>
+            </td>
+            <td class="text-center btn-small">
+              <button
+                pButton
+                pRipple
+                type="button"
+                class="p-button-secondary btn-icon"
+                pTooltip="Editar"
+                tooltipPosition="left"
+                (click)="details(user)"
+              >
+                <fa-icon [icon]="editIcon"></fa-icon>
+              </button>
+              <button
+                pButton
+                pRipple
+                type="button"
+                class="p-button-secondary btn-icon"
+                style="margin-left: 0.5rem"
+                pTooltip="Remover"
+                tooltipPosition="right"
+                (click)="remove(user)"
+              >
+                <fa-icon [icon]="trashIcon"></fa-icon>
+              </button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,21 @@
+:host ::ng-deep .btn-small {
+  button {
+    background: var(--surfaceSecondaryHover);
+    height: 36px;
+
+    &:hover {
+      background: var(--surfaceSecondary) !important;
+    }
+  }
+
+  .pi-pencil:before,
+  .pi-trash:before {
+    font-size: 14px;
+  }
+}
+
+:host ::ng-deep td {
+  .p-button-label {
+    display: none;
+  }
+}

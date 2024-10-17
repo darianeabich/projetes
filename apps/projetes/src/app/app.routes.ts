@@ -1,3 +1,4 @@
+/* eslint-disable @nx/enforce-module-boundaries */
 import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
@@ -14,5 +15,10 @@ export const appRoutes: Route[] = [
   {
     path: 'home',
     loadComponent: () => import('@projetes/home').then((m) => m.HomeComponent),
+  },
+  {
+    path: 'register',
+    loadChildren: () =>
+      import('@projetes/registers').then((r) => r.registerRoutes),
   },
 ];
