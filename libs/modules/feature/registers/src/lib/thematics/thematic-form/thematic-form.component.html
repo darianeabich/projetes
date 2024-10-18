@@ -1,0 +1,39 @@
+<section id="thematic-form">
+  <form [formGroup]="thematicForm" (submit)="save()">
+    <div class="form-group p-fluid mb-4">
+      <label for="titulo">Título da temática:</label>
+      <input
+        id="titulo"
+        type="text"
+        formControlName="titulo"
+        aria-describedby="Input para título da temática"
+        placeholder="Digite um título"
+        pInputText
+      />
+      <!-- <small id="titulo-help" class="block">Enter your username to reset your password.</small> -->
+    </div>
+  </form>
+  <div class="c-dialog__footer">
+    <div class="c-dialog__footer-left"></div>
+    <div class="c-dialog__footer-center">
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Cancelar"
+        class="p-button-secondary"
+        icon="pi pi-times"
+        (click)="closeModal()"
+      ></button>
+      <button
+        pButton
+        pRipple
+        type="submit"
+        label="Salvar"
+        icon="pi pi-check"
+        [disabled]="thematicForm.invalid"
+      ></button>
+    </div>
+    <div class="c-dialog__footer-right"></div>
+  </div>
+</section>

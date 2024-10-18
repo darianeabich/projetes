@@ -35,3 +35,26 @@
 .p-dialog {
   border-radius: 16px !important;
 }
+
+.c-dialog {
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-left {
+      display: flex;
+      gap: 8px;
+    }
+
+    &-center {
+      display: flex;
+      gap: 8px;
+    }
+
+    &-right {
+      display: flex;
+      gap: 8px;
+    }
+  }
+}

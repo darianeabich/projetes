@@ -1,4 +1,5 @@
-import { CommonModule, NgIf } from '@angular/common';
+/* eslint-disable @nx/enforce-module-boundaries */
+import { NgIf } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { LayoutModule } from '@projetes/layout';
@@ -7,7 +8,15 @@ import { ButtonModule } from 'primeng/button';
 
 @Component({
   standalone: true,
-  imports: [CommonModule, RouterModule, LayoutModule, NgIf, ButtonModule],
+  imports: [
+    // CommonModule,
+    // BrowserModule,
+    RouterModule,
+    LayoutModule,
+    NgIf,
+    ButtonModule,
+    // NoopAnimationsModule,
+  ],
   selector: 'projetes-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
