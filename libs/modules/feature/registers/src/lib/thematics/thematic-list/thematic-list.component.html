@@ -1,0 +1,71 @@
+<section id="thematic-list" class="t-section">
+  <projetes-breadcrumb [items]="breadcrumbs"></projetes-breadcrumb>
+
+  <div class="col-md-12 section__content">
+    <h5 class="titulo-h5">Lista de Temáticas</h5>
+    <p-toolbar>
+      <div class="p-toolbar-group-left"></div>
+      <div class="p-toolbar-group-right">
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Nova Temática"
+          icon="pi pi-plus"
+          iconPos="left"
+          (click)="new()"
+        ></button>
+      </div>
+    </p-toolbar>
+
+    <div class="tabela-tecnicas">
+      <p-table
+        [value]="thematicList"
+        selectionMode="single"
+        dataKey="id"
+        responsiveLayout="scroll"
+        styleClass="p-datatable-sm"
+      >
+        <ng-template pTemplate="header">
+          <tr>
+            <th style="width: 5%">#</th>
+            <th>Temática</th>
+
+            <th style="width: 20%" class="text-center">Ação</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-tematica>
+          <tr>
+            <td>{{ tematica.id }}</td>
+            <td>{{ tematica.titulo }}</td>
+            <td class="text-center btn-small">
+              <button
+                pButton
+                pRipple
+                type="button"
+                class="p-button-secondary btn-icon"
+                pTooltip="Editar"
+                tooltipPosition="left"
+                (click)="details(tematica)"
+              >
+                <fa-icon [icon]="editIcon"></fa-icon>
+              </button>
+              <button
+                pButton
+                pRipple
+                type="button"
+                class="p-button-secondary btn-icon"
+                style="margin-left: 0.5rem"
+                pTooltip="Remover"
+                tooltipPosition="right"
+                (click)="remove(tematica)"
+              >
+                <fa-icon [icon]="trashIcon"></fa-icon>
+              </button>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</section>
