@@ -1,0 +1,103 @@
+<section id="technique-list">
+  <projetes-breadcrumb [items]="breadcrumbs"></projetes-breadcrumb>
+
+  <div class="col-md-12 div-content">
+    <h5 class="titulo-h5">Lista de Técnicas</h5>
+    <p-toolbar>
+      <div class="p-toolbar-group-left"></div>
+      <div class="p-toolbar-group-right">
+        <!-- <button pButton pRipple type="button" label="Importar técnicas" class="p-button-secondary" style="margin-right: 1rem;" icon="pi pi-download" iconPos="left"></button> -->
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Nova técnica"
+          icon="pi pi-plus"
+          iconPos="left"
+          (click)="goToNewTechnique()"
+        ></button>
+      </div>
+    </p-toolbar>
+
+    <div class="tabela-tecnicas">
+      <p-table
+        [value]="techniqueList"
+        responsiveLayout="scroll"
+        selectionMode="single"
+        dataKey="id"
+        styleClass="p-datatable-sm"
+        [autoLayout]="true"
+        [paginator]="true"
+        [rows]="10"
+        [first]="first"
+      >
+        <ng-template pTemplate="header">
+          <tr>
+            <th>#</th>
+            <th>Técnica</th>
+            <th>Tipo</th>
+            <th>Status</th>
+            <th class="text-center">Ação</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-tecnica>
+          <tr>
+            <td>{{ tecnica.id }}</td>
+            <td>{{ tecnica.titulo }}</td>
+            <td>{{ tecnica.tipo }}</td>
+            <td *ngIf="!tecnica.status">
+              <span class="inactive-state">Inativa</span>
+            </td>
+            <td *ngIf="tecnica.status">
+              <span class="active-state">Ativa</span>
+            </td>
+            <td class="text-center">
+              <button
+                pButton
+                pRipple
+                type="button"
+                class="p-button-secondary btn-icon"
+                pTooltip="Editar"
+                tooltipPosition="left"
+                (click)="details(tecnica)"
+              >
+                <fa-icon [icon]="editIcon"></fa-icon>
+              </button>
+              <button
+                pButton
+                pRipple
+                type="button"
+                class="p-button-secondary btn-icon"
+                style="margin-left: 0.5rem"
+                pTooltip="Remover"
+                tooltipPosition="right"
+                (click)="remove(tecnica)"
+              >
+                <fa-icon [icon]="trashIcon"></fa-icon>
+              </button>
+            </td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft" let-state>
+          <button
+            type="button"
+            pButton
+            icon="pi pi-chevron-left"
+            (click)="preview()"
+          ></button>
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+          <button
+            type="button"
+            pButton
+            icon="pi pi-chevron-right"
+            (click)="next()"
+          ></button>
+        </ng-template>
+        <ng-template let-item pTemplate="paginatordropdownitem">
+          {{ item.value }} - per page
+        </ng-template>
+      </p-table>
+    </div>
+  </div>
+</section>

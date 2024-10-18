@@ -11,4 +11,9 @@ export const registerRoutes: Route[] = [
     path: 'thematics',
     component: ThematicListComponent,
   },
+  {
+    path: 'techniques',
+    loadChildren: () =>
+      import('./techniques/technique.routes').then((r) => r.techniqueRoutes),
+  },
 ];
