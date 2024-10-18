@@ -38,7 +38,7 @@ export class MenuComponent implements OnInit {
               },
               {
                 label: 'Usuários',
-                // routerLink: ['/cadastros/usuarios'],
+                routerLink: ['/register/users'],
               },
               {
                 label: 'Temáticas',

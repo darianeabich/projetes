@@ -1,4 +1,4 @@
-import { PerfilTypeEnum } from '@projetes/shared/enums';
+import { PerfilTypeEnum } from '@projetes/shared-enums';
 import { ProjectDetailsI } from './ProjectDetails';
 
 export interface UserI {

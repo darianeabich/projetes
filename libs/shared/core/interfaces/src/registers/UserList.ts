@@ -1,4 +1,4 @@
-import { PerfilTypeEnum } from '@projetes/shared/enums';
+import { PerfilTypeEnum } from '@projetes/shared-enums';
 
 export interface UserListI {
   id: number;

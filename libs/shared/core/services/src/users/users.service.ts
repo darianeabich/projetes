@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { UserI } from '@projetes/interfaces';
+import { UserI } from '@projetes/shared-interfaces';
 import { catchError, map, Observable, of } from 'rxjs';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { environment } from './../../../../../../apps/projetes/src/environments/environment';

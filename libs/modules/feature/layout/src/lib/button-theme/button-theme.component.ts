@@ -1,6 +1,7 @@
+/* eslint-disable @nx/enforce-module-boundaries */
 import { Component, inject, OnInit } from '@angular/core';
+import { ETheme } from '@projetes/shared-enums';
 import { LocalStorageService } from '@projetes/shared-service';
-import { ETheme } from '@projetes/shared/enums';
 
 @Component({
   selector: 'projetes-button-theme',

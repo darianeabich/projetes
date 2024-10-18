@@ -4,7 +4,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-import { UserListI } from '@projetes/interfaces';
+import { UserListI } from '@projetes/shared-interfaces';
 import { UsersService } from '@projetes/shared-service';
 import { BreadcrumbComponent } from '@projetes/ui-common';
 import { MenuItem } from 'primeng/api';
