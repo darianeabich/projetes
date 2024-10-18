@@ -1,5 +1,5 @@
 <section id="user-list" class="ul-section">
-  <projetes-breadcrumb></projetes-breadcrumb>
+  <projetes-breadcrumb [items]="breadcrumbs"></projetes-breadcrumb>
 
   <div class="col-md-12 section__content">
     <h5 class="titulo-h5">Lista de Usuários</h5>
@@ -13,7 +13,7 @@
           label="Novo Usuário"
           icon="pi pi-plus"
           iconPos="left"
-          routerLink="form"
+          (click)="goToNewUser()"
         ></button>
       </div>
     </p-toolbar>

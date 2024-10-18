@@ -1,0 +1,108 @@
+<section id="user-form" class="form-section">
+  <projetes-breadcrumb [items]="breadcrumbs"></projetes-breadcrumb>
+
+  <div class="col-md-12 section-content">
+    <h5 class="titulo-h5">Novo Usuário</h5>
+
+    <form [formGroup]="userForm" class="form mt-4" (submit)="save()">
+      <div class="row">
+        <div class="col-6 text-left">
+          <div class="form-group">
+            <label for="perfil" class="form-control-label pb-1"
+              >Tipo de Usuário:</label
+            >
+            <br />
+            <p-dropdown
+              #perfil
+              formControlName="perfil"
+              [options]="userType"
+              optionLabel="label"
+              placeholder="Selecione um tipo"
+            ></p-dropdown>
+          </div>
+        </div>
+
+        <div class="col-6 text-right">
+          <div class="form-group">
+            <h5 for="status" id="status-label" class="titulo-h5">Ativo:</h5>
+            <p-inputSwitch formControlName="status" id="status"></p-inputSwitch>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <br />
+
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group mb-4">
+            <label for="nome" class="form-control-label pb-1"
+              >Nome completo:</label
+            >
+            <input id="nome" formControlName="nome" class="form-control" />
+            <small
+              *ngIf="userForm.get('nome')?.errors?.['required']"
+              text="Campo obrigatório"
+            ></small>
+          </div>
+        </div>
+
+        <!-- <div class="col-6">
+          <div class="form-group mb-4">
+            <label for="sobrenome" class="form-control-label pb-1">Sobrenome:</label>
+            <br>
+            <input #sobrenome formControlName="sobrenome" class="form-control"/>
+            <small *ngIf="registerUserForm.get('sobrenome')?.errors?.['required']" text="Campo obrigatório"></small>
+          </div>
+        </div> -->
+
+        <div class="col-6">
+          <div class="form-group mb-4">
+            <label for="email" class="form-control-label pb-1">E-mail:</label>
+            <input id="email" formControlName="email" class="form-control" />
+            <!-- <small *ngIf="registerUserForm.get('email')?.errors?.['required']" text="Campo obrigatório"></small> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group mb-4">
+            <label for="cod_institucional" class="form-control-label pb-1"
+              >Matrícula:</label
+            >
+            <input
+              id="cod_institucional"
+              formControlName="cod_institucional"
+              class="form-control"
+            />
+            <!-- <small *ngIf="registerUserForm.get('cod_institucional')?.errors?.['required']" text="Campo obrigatório"></small> -->
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="form-group mb-4">
+            <label for="senha" class="form-control-label pb-1">Senha:</label>
+            <input id="senha" formControlName="senha" class="form-control" />
+            <!-- <small *ngIf="registerUserForm.get('senha')?.errors?.['required']" text="Campo obrigatório"></small> -->
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <div class="row">
+        <div class="text-end">
+          <button
+            pButton
+            pRipple
+            type="submit"
+            label="Salvar"
+            icon="pi pi-check"
+            [disabled]="userForm.invalid"
+          ></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

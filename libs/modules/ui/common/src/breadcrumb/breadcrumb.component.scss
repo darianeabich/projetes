@@ -1,0 +1,12 @@
+:host ::ng-deep .p-breadcrumb {
+  background: transparent !important;
+  padding-left: 0 !important;
+
+  ol {
+    padding-left: 0 !important;
+
+    a {
+      text-decoration: none !important;
+    }
+  }
+}

@@ -7,6 +7,7 @@ import { BreadcrumbModule } from 'primeng/breadcrumb';
   selector: 'projetes-breadcrumb',
   standalone: true,
   imports: [CommonModule, BreadcrumbModule],
+  styleUrl: './breadcrumb.component.scss',
   template: `<p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>`,
 })
 export class BreadcrumbComponent implements OnInit {

@@ -11,7 +11,6 @@ import { MenuItem } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { ToolbarModule } from 'primeng/toolbar';
-import { map } from 'rxjs';
 
 @Component({
   selector: 'projetes-user-list',
@@ -47,15 +46,19 @@ export class UserListComponent implements OnInit {
    * @param {number} limit
    */
   getUsers(offset: number, limit: number) {
-    this.userService
-      .getUsers(offset, limit)
-      .pipe(
-        map((response: any) => {
-          console.log(response);
-          this.usersList = response;
-        })
-      )
-      .subscribe();
+    //   this.userService
+    //     .getUsers(offset, limit)
+    //     .pipe(
+    //       map((response: any) => {
+    //         console.log(response);
+    //         this.usersList = response;
+    //       })
+    //     )
+    //     .subscribe();
+  }
+
+  goToNewUser() {
+    this.router.navigate(['register/users/form']);
   }
 
   /**
